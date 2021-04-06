@@ -23,13 +23,13 @@ after_success:
   #test
   - docker ps -a
 
-deploy:
-  provider: elasticbeanstalk
-  region: "us-east-2"
-  app: "testapp"
-  env: "Testapp-env-1"
-  bucket_name: "elasticbeanstalk-us-east-2-987423242630"
-  on:
-   branch: master
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY 
+#deploy:
+  #provider: elasticbeanstalk
+  #region: "us-east-2"
+  #app: "testapp"
+  #env: "Testapp-env-1"
+  #bucket_name: "elasticbeanstalk-us-east-2-987423242630"
+  #on:
+  # branch: master
+  #access_key_id: $AWS_ACCESS_KEY
+  #secret_access_key: $AWS_SECRET_KEY 
