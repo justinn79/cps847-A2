@@ -12,15 +12,12 @@ install:
 
 script:
   - coverage run tests.py
-  - docker image build -t justinn79/myrepo .
+  - docker image build -t cps847group16/docker-repo .
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
-  #log in to docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  #take built images and push to DOcker hub
-  - docker push justinn79/myrepo
-  #test
+  - docker push cps847group16/docker-repo
   - docker ps -a
 
 deploy:
